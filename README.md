@@ -104,9 +104,9 @@ python main.py --is_sim --push_rewards --experience_replay --explore_rate_decay 
 Data collected from each training session (including RGB-D images, camera parameters, heightmaps, actions, rewards, model snapshots, visualizations, etc.) is saved into a directory in the `logs` folder. A training session can be resumed by adding the flags `--load_snapshot` and `--continue_logging`, which then loads the latest model snapshot specified by `--snapshot_file` and transition history from the session directory specified by `--logging_directory`:
 
 ```shell
-python main.py --is_sim --push_rewards --experience_replay --explore_rate_decay --save_visualizations \
-    --load_snapshot --snapshot_file 'logs/YOUR-SESSION-DIRECTORY-NAME-HERE/models/snapshot-backup.reinforcement.pth' \
-    --continue_logging --logging_directory 'logs/YOUR-SESSION-DIRECTORY-NAME-HERE' \
+
+python main.py --is_sim --push_rewards --experience_replay --explore_rate_decay --save_visualizations --load_snapshot --snapshot_file 'logs/YOUR-SESSION-DIRECTORY-NAME-HERE/models/snapshot-backup.reinforcement.pth' --continue_logging --logging_directory 'logs/YOUR-SESSION-DIRECTORY-NAME-HERE'
+
 ```
 
 Various training options can be modified or toggled on/off with different flags (run `python main.py -h` to see all options):
